@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tesana — Join the Fun!</title>
+
+<!-- Open Graph / link preview tags (iMessage, Discord, Facebook, etc.) -->
+<meta property="og:title" content="Tesana — Join the Fun!">
+<meta property="og:description" content="Build games with AI, compete for weekly cash prizes, and join a community of creators leveling up together.">
+<meta property="og:image" content="https://gaia-creates.github.io/Promo1/og-image.png">
+<meta property="og:url" content="https://gaia-creates.github.io/Promo1/">
+<meta property="og:type" content="website">
+
+<!-- Twitter/X card tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tesana — Join the Fun!">
+<meta name="twitter:description" content="Build games with AI, compete for weekly cash prizes, and join a community of creators leveling up together.">
+<meta name="twitter:image" content="https://gaia-creates.github.io/Promo1/og-image.png">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  background: #0c0c10;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  background: #0c0c10;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #eaeaea;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 229, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  z-index: 0;
+}
+
+.bg-glow {
+  position: absolute;
+  top: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  height: 320px;
+  background: radial-gradient(ellipse at center, rgba(255, 0, 200, 0.12) 0%, rgba(0, 229, 255, 0.07) 45%, transparent 75%);
+  z-index: 0;
+}
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  padding: 28px 16px 26px;
+  text-align: center;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.logo-mark {
+  height: 26px;
+  width: auto;
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+}
+
+.tagline {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 13px;
+  color: #00e5ff;
+  text-shadow: 0 0 10px rgba(0,229,255,0.5), 2px 2px 0 #ff00c8;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.invite-copy {
+  font-size: 12.5px;
+  color: #c4cad6;
+  line-height: 1.55;
+  max-width: 400px;
+  margin: 12px auto 0;
+}
+
+.invite-copy strong {
+  color: #ffffff;
+}
+
+.hr {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00e5ff, #ff00c8, transparent);
+  margin: 24px 0;
+  opacity: 0.6;
+}
+
+.perks-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 22px;
+  flex-wrap: wrap;
+}
+
+.perk-chip {
+  border: 1px solid #2a2a38;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 10px;
+  color: #d8dae0;
+  background: #12121a;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.perk-chip.cyan { border-color: #00e5ff; background: rgba(0,229,255,0.06); }
+.perk-chip.pink { border-color: #ff00c8; background: rgba(255,0,200,0.06); }
+.perk-chip.gold { border-color: #ffd34d; background: rgba(255,211,77,0.06); }
+
+/* SOCIAL SECTION */
+.social-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: #ffd34d;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+.social-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2a2a38;
+  border-radius: 50%;
+  padding: 6px;
+  background: #12121a;
+  text-decoration: none;
+}
+
+.social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.social-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.social-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* per-platform colors */
+.s-discord .social-icon { background: #5865F2; box-shadow: 0 0 12px rgba(88,101,242,0.5); }
+.s-discord { border-color: #5865F2; }
+
+.s-instagram .social-icon { background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); box-shadow: 0 0 12px rgba(214,36,159,0.5); }
+.s-instagram { border-color: #d6249f; }
+
+.s-x .social-icon { background: #000000; border: 1px solid #444; box-shadow: 0 0 12px rgba(255,255,255,0.2); }
+.s-x { border-color: #555; }
+
+.s-tiktok .social-icon { background: #010101; box-shadow: 0 0 12px rgba(37,244,238,0.4); }
+.s-tiktok { border-color: #25F4EE; }
+
+.site-link-box {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.site-link-box a {
+  display: inline-block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0c0c10;
+  background: linear-gradient(90deg, #00e5ff, #4bff8c);
+  padding: 11px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 18px rgba(0,229,255,0.4);
+}
+
+.footer-note {
+  text-align: center;
+  font-size: 9.5px;
+  color: #ffd34d;
+  margin-top: 22px;
+  letter-spacing: 0.4px;
+  font-family: 'Press Start 2P', monospace;
+}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+<div class="wrap">
+
+  <div class="logo-row">
+    <img class="logo-mark" src="pickaxe.png" alt="">
+    <img class="logo-img" src="wordmark.png" alt="tesana">
+  </div>
+  <div class="tagline">JOIN THE SERVER</div>
+
+  <div class="invite-copy">
+    Build games with AI, compete for <strong>weekly cash prizes</strong>, and join a community of creators leveling up together. Whether you're here to build, play, or just hang out — there's a seat for you.
+  </div>
+
+  <div class="perks-row">
+    <div class="perk-chip cyan">🎮 Weekly Competitions</div>
+    <div class="perk-chip pink">💰 Cash + Credit Prizes</div>
+    <div class="perk-chip gold">🤝 Active Dev Community</div>
+  </div>
+
+  <div class="hr"></div>
+
+  <div class="social-label">// FOLLOW TESANA</div>
+
+  <div class="social-grid">
+    <a class="social-item s-discord" href="https://discord.gg/tesana">
+      <div class="social-icon">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M20.317 4.369A19.791 19.791 0 0 0 15.927 3c-.21.375-.444.875-.608 1.27a18.27 18.27 0 0 0-5.66 0A12.6 12.6 0 0 0 9.05 3a19.736 19.736 0 0 0-4.39 1.37C1.677 8.713.916 12.94 1.296 17.11a19.9 19.9 0 0 0 5.993 3.03c.483-.66.913-1.36 1.282-2.095a12.86 12.86 0 0 1-2.02-.97c.17-.124.336-.253.497-.386 3.896 1.8 8.118 1.8 11.967 0 .163.133.33.262.497.386-.643.382-1.323.71-2.022.97.37.735.798 1.435 1.282 2.095a19.83 19.83 0 0 0 6-3.03c.45-4.83-.766-9.02-3.455-12.74ZM8.68 14.81c-1.16 0-2.105-1.067-2.105-2.38 0-1.312.926-2.38 2.105-2.38 1.19 0 2.135 1.078 2.105 2.38 0 1.313-.925 2.38-2.105 2.38Zm6.64 0c-1.16 0-2.105-1.067-2.105-2.38 0-1.312.925-2.38 2.105-2.38 1.19 0 2.135 1.078 2.105 2.38 0 1.313-.916 2.38-2.105 2.38Z"/></svg>
+      </div>
+    </a>
+
+    <a class="social-item s-instagram" href="https://www.instagram.com/tesana.ai/">
+      <div class="social-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+      </div>
+    </a>
+
+    <a class="social-item s-x" href="https://x.com/TesanaAI">
+      <div class="social-icon">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231ZM17.083 19.77h1.833L7.084 4.126H5.117Z"/></svg>
+      </div>
+    </a>
+
+    <a class="social-item s-tiktok" href="https://www.tiktok.com/@tesana.official">
+      <div class="social-icon">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M16.6 5.82c-.7-.77-1.1-1.76-1.1-2.82h-3.2v13.62a2.6 2.6 0 1 1-1.84-2.49V10.9a5.83 5.83 0 1 0 5.04 5.78V9.4a8.46 8.46 0 0 0 4.7 1.43V7.6c-1.27 0-2.46-.45-3.6-1.78Z"/></svg>
+      </div>
+    </a>
+  </div>
+
+  <div class="hr"></div>
+
+  <div class="site-link-box">
+    <a href="https://tesana.ai">Learn more at tesana.ai</a>
+  </div>
+
+  <div class="footer-note">SHOW US WHAT YOU CALL CREATIVE</div>
+
+</div>
+</body>
+</html>
